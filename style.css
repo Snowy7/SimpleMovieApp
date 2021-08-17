@@ -1,0 +1,202 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    letter-spacing: 3px;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgb(20, 20, 22);
+}
+  
+  
+  .shadow {
+    -moz-box-shadow:    400px -10px 150px 20px #000000ef;
+    -webkit-box-shadow: 400px -10px 150px 20px #000000ef;
+    box-shadow: inset 400px -10px 150px 20px #000000ef;
+    }
+
+  .container{
+      color: white;
+      min-height: calc(80% + 50px);
+      background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .container .subject{
+      color: white;
+      font-size: 40px;
+      border-left: 5px solid white;
+      padding: 5px;
+      margin-left: 60px;
+      padding-top: 30px;
+  }
+
+  .container .title{
+      margin-left: 10px;
+      font-weight: 700;
+  }
+
+  .container .score{
+    border: 1px solid white;
+    background-color: #403c49;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 50px;
+    width: fit-content;
+  }
+
+  .container .desc{
+      color: rgba(224, 224, 224, 0.877);
+      font-size: 20px;
+      width: 30%;
+      margin-left: 80px;
+      padding-top: 30px;
+      overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-height: 1em;     /* fallback */
+   max-height: calc(1em * 5);      /* fallback */
+   -webkit-line-clamp: 5; /* number of lines to show */
+   -webkit-box-orient: vertical;
+  }
+
+
+  .wrapper {
+      width: 92%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-padding-bottom: 0;
+    scroll-behavior: smooth;
+    position: relative;
+    bottom: 100px;
+
+  }
+  
+  #wrapper::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #f5f5f5;
+  }
+  
+  #wrapper::-webkit-scrollbar
+  {
+    height: 10px;
+      width: 15px;
+      background-color: #f5f5f500;
+  }
+  
+  #wrapper::-webkit-scrollbar-thumb
+  {
+      border-radius: 0px;
+      width: 5px;
+      -webkit-box-shadow: inset 0 0 6px rgba(136, 136, 136, 0.3);
+      box-shadow: inset 0 0 6px rgba(112, 112, 112, 0.3);
+      background-color: rgba(44, 44, 54, 0.945);
+  }
+  .wrapper section {
+    width: 100% !important;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0;
+    z-index: 8;
+  }
+  .wrapper section .item {
+    min-width: 150px;
+    padding: 0 2px;
+    transition: 250ms all;
+    z-index: 11;
+    cursor: pointer;
+  }
+  .wrapper section .item:hover {
+    margin: 0 10px;
+    z-index: 9;
+    transform: scale(1.1);
+  }
+  .wrapper section .item img{
+      width: 100%;
+      height: auto;
+  }
+  .wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  .wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+  .wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+
+  .arrow__btn{
+    color: #fff;    
+    background: rgba(36, 32, 46, 0.555);
+    border-width: 0ch;
+    width: 4%;
+    height: 240px;
+    font-size: 3em;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+    transition: 0.2 all;
+    bottom: 100px;
+  }
+
+  .arrow__btn:hover{
+    color: #fff;    
+    background: rgba(26, 24, 31, 0.555);
+    cursor: pointer;
+    transform: scale(0.98);
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    .wrapper #section1 {
+      min-width: 200px;
+    }
+    .arrow__btn{
+      width: 8%;
+    }
+
+    .wrapper{
+      width: 84%;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    
+    .arrow__btn{
+      width: 8%;
+    }
+
+    .wrapper{
+      width: 84%;
+    }
+    .wrapper section .item {
+      min-width: 200px;
+    }
+  }

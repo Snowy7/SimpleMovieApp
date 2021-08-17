@@ -1,0 +1,101 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  background: #0e0c0f !important;
+  overflow: auto !important;
+}
+
+.poster-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 5px 20px 20px;
+}
+
+.poster {
+    width: 250px;
+    height: calc((1em * 6) + 320px);
+    margin: 8px 8px 8px 8px;
+    background-color: #18141a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 50%);
+  transition: 0.2s all;
+}
+
+.poster:hover{
+    transform: scale(.95);
+}
+
+.poster__img {
+  height: 150px;
+  background: url("http://cdn1-www.comingsoon.net/assets/uploads/gallery/angry-birds-1412173620/angrybirdsmovie0004.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.poster__info {
+  background: #18141a;
+  padding: 2px 25px 40px;
+}
+.poster__title {
+  color: wheat;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 0.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 1em;     /* fallback */
+  max-height: calc(1em);      /* fallback */
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.poster__text {
+  font-size: .9em;
+  color: #999;
+  font-weight: 300;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-height: 1em;     /* fallback */
+   max-height: calc(1em * 6);      /* fallback */
+   -webkit-line-clamp: 6; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+a {
+  display: block;
+  width: 200px;
+  background: rgb(36, 197, 103);
+  text-align: center;
+  margin: 15px auto;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 300;
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.18);
+  transition: 0.3s;
+  cursor: pointer;
+}
+a:hover {
+    transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.18);
+}
