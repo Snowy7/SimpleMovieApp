@@ -62,7 +62,7 @@ html {
    text-overflow: ellipsis;
    display: -webkit-box;
    line-height: 1em;     /* fallback */
-   max-height: calc(1em * 5);      /* fallback */
+   /*max-height: calc(1em * 5);*/      /* fallback */
    -webkit-line-clamp: 5; /* number of lines to show */
    -webkit-box-orient: vertical;
   }
